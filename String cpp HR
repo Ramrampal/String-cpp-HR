@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string s1, s2;
+
+    cin >> s1;
+    cin >> s2;
+
+    // Print lengths of both strings
+    cout << s1.size() << " " << s2.size() << endl;
+
+    // Print concatenated string
+    cout << s1 + s2 << endl;
+
+    // Swap first characters if both strings are not empty
+    if (s1.length() > 0 && s2.length() > 0) {
+        // Swap the first characters
+        char temp = s1[0];
+        s1[0] = s2[0];
+        s2[0] = temp;
+    }
+
+    // Print strings with swapped first characters
+    cout << s1 << " " << s2 << endl;
+
+    return 0;
+}
